@@ -52,17 +52,112 @@ Repository containing resources for modding older versions of Fortnite, includin
 
 ---
 
-# Tools
+# Unreal Engine Modding Tools
 
-| Tool | Link |
-|------|------|
-| UE4Pak | https://discord.com/channels/1280064513282019368/1280068779644289066/1280068779644289066 |
-| Lawin Server V2 | https://discord.com/channels/1280064513282019368/1280068957532983336/1280068957532983336 |
-| Blender Addons | https://discord.com/channels/1280064513282019368/1280069936093597756/1280069936093597756 |
-| Asset Registry | https://discord.com/channels/1280064513282019368/1280071244687085650/1280071244687085650 |
-| FModel | https://discord.com/channels/1280064513282019368/1280069554894147667/1280069554894147667 |
-| Blender Skeleton | https://discord.com/channels/1280064513282019368/1280070223357018146/1280070223357018146 |
-| PUBG Emote Tools | https://discord.com/channels/1280064513282019368/1282826561304789062/1282826561304789062 |
+This is a collection of commonly used tools for Unreal Engine 4/5 modding, extraction, asset editing, scripting, and packaging.
 
 ---
+
+## Core Modding Frameworks
+
+| Tool | Description | Link |
+|------|-------------|------|
+| UE4SS | Runtime modding framework with Lua scripting, SDK generation, live property editing, and C++ mod support | https://github.com/UE4SS-RE/RE-UE4SS |
+| Universal Unreal Engine Unlocker (UUU) | Unlocks in-game console and free camera for UE4 games | https://framedsc.com/GeneralGuides/uuuv4.htm |
+| UnrealModLoader | Loads mods into UE4 games via runtime hooks | https://github.com/raiderangel/UnrealModLoader |
+
+---
+
+## Asset Viewers / Extractors
+
+| Tool | Description | Link |
+|------|-------------|------|
+| FModel | View/export UE4/UE5 assets, textures, data tables, models | https://fmodel.app |
+| UModel (UE Viewer) | Extract meshes, textures, animations from UE packages | https://www.gildor.org/en/projects/umodel |
+| QuickBMS (UE scripts) | Script-based extraction for .pak files | https://aluigi.altervista.org/quickbms.htm |
+| UnrealPak | Official Epic tool for packing/unpacking .pak files | Included with Unreal Engine |
+
+---
+
+## Asset Editing Tools
+
+| Tool | Description | Link |
+|------|-------------|------|
+| UAssetGUI | Edit .uasset / .uexp files (data tables, blueprints, etc.) | https://github.com/atenfyr/UAssetGUI |
+| UAssetAPI | Library for reading/writing UE assets programmatically | https://github.com/atenfyr/UAssetAPI |
+| Hex Editor (HxD) | Manual editing of binary assets | https://mh-nexus.de/en/hxd/ |
+
+---
+
+## Encryption / Keys / IoStore
+
+| Tool | Description | Link |
+|------|-------------|------|
+| AES Key Finder (AESDumpster) | Finds AES encryption keys for UE4 .pak files | https://github.com/Cracko298/AESDumpster |
+| IoStore Explorer | Extracts UE5 .ucas/.utoc containers | https://github.com/LongerWarrior/io-store-tools |
+| FModel Mappings | Required .usmap mapping support for UE5 assets | https://github.com/atenfyr/UAssetGUI |
+
+---
+
+## Shader / Rendering Tools
+
+| Tool | Description | Link |
+|------|-------------|------|
+| Murilo Shader | Fixes / restores broken Fortnite shaders in older UE projects | https://github.com/MuriloGaming/MuriloShader |
+| RenderDoc | Graphics frame debugger for Unreal Engine rendering analysis | https://renderdoc.org/ |
+
+---
+
+## SDK / Reverse Engineering
+
+| Tool | Description | Link |
+|------|-------------|------|
+| UE4SS SDK Dumper | Generates full C++ headers from games | https://github.com/UE4SS-RE/RE-UE4SS |
+| IDA Pro | Advanced reverse engineering tool | https://hex-rays.com/ida-pro/ |
+| Ghidra | Free reverse engineering suite | https://ghidra-sre.org/ |
+| x64dbg | Windows debugger for game analysis | https://x64dbg.com/ |
+
+---
+
+## 3D / Animation Tools
+
+| Tool | Description | Link |
+|------|-------------|------|
+| Blender | Used for editing meshes, skeletal assets, animations | https://www.blender.org |
+| PSK/PSA Blender Plugin | Import/export UE4 skeletal meshes | https://github.com/Befzz/blender3d_import_psk_psa |
+| UE Viewer (UModel) Export | Convert assets to FBX for Blender | https://www.gildor.org/en/projects/umodel |
+
+---
+
+## Packaging / Rebuilding
+
+| Tool | Description | Link |
+|------|-------------|------|
+| UnrealPak | Pack mods into .pak files | Included with UE |
+| Repak | Modern alternative .pak packing tool | https://github.com/trumank/repak |
+| ZenTools | IoStore packing/unpacking for UE5 | https://github.com/donovanj44/io-store-docs |
+
+---
+
+## Extra Useful Utilities
+
+| Tool | Description | Link |
+|------|-------------|------|
+| Asset Registry Viewer | Explore UE asset dependencies | https://github.com/atenfyr/UAssetAPI |
+| Console Unlocker Plugins | Enable hidden dev commands in UE games | included in UE4SS |
+| DataTable Viewer Tools | Convert UE DataTables to JSON | via FModel export |
+
+---
+
+## Recommended Workflow
+
+1. Extract game files using FModel or UModel  
+2. Find encryption keys using AESDumpster (if needed)  
+3. Inspect assets using FModel / UAssetGUI  
+4. Export meshes to Blender via UModel  
+5. Edit assets in Unreal Engine project  
+6. Package using UnrealPak or Repak  
+7. Test in-game with UE4SS or mod loader  
+
+----
 Guide and additional resources provided by s3cw
